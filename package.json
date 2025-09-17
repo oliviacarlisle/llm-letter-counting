@@ -1,0 +1,25 @@
+{
+  "name": "llm-letter-counting",
+  "version": "0.1.0",
+  "description": "Can LLMs correctly count letters in words? Benchmarks and tests to answer the question",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliviacarlisle/llm-letter-counting.git"
+  },
+  "author": "Olivia Carlisle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oliviacarlisle/llm-letter-counting/issues"
+  },
+  "homepage": "https://github.com/oliviacarlisle/llm-letter-counting#readme",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.62.0",
+    "dotenv": "^17.2.2"
+  }
+}
