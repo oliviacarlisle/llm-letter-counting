@@ -48,7 +48,7 @@ const msg = await anthropic.messages.create({
   model: "claude-sonnet-4-20250514",
   system: "You are tasked with counting the number of times a given letter appears in a given word. Provide your response using the JSON formatting tool.",
   max_tokens: 2048,
-  temperature: 1,
+  temperature: 0,
 //   thinking: {
 //     type: "enabled",
 //     budget_tokens: 1024
@@ -60,4 +60,8 @@ const msg = await anthropic.messages.create({
 
 // console.log(msg.content[msg.content.length - 1].input);
 console.log(msg.content)
+const lastMessage = msg.content[msg.content.length - 1];
+if (lastMessage.type === 'tool_use') {
+    console.log(lastMessage.input);
+}
 // { word: 'yeufydbdvcfdgsydf', letter: 'y', count: 3 }
